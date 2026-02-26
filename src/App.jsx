@@ -7,9 +7,15 @@ function App() {
   const [counter, setCounter] = useState(0)
   const addvalue = () => {
     setCounter(counter + 1)
+    if (counter === 21) {
+      setCounter(counter)
+    }
   }
   const removevalue = () => {
     setCounter(counter - 1)
+    if (counter === 0) {
+      setCounter(0)
+    }
   }
   return (
     <>
